@@ -7,29 +7,20 @@
    Com o caminho absoluto o arquivo nao e reprocessado, e CSS e preload
    apontam para a mesma URL. */
 @font-face {
-  font-family: 'Rubik Mono One';
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/assets/fonts/RubikMonoOne-Regular.woff2') format('woff2');
+  src: url('/assets/fonts/poppins-regular-webfont.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Roboto Mono';
+  font-family: 'Poppins';
   font-style: normal;
-  font-weight: 100 700;
+  font-weight: 700;
   font-display: swap;
-  src: url('/assets/fonts/RobotoMono-Variable.woff2') format('woff2');
+  src: url('/assets/fonts/poppins-bold-webfont.woff2') format('woff2');
 }
-
-@font-face {
-  font-family: 'Roboto Mono';
-  font-style: italic;
-  font-weight: 100 700;
-  font-display: swap;
-  src: url('/assets/fonts/RobotoMono-Variable-Italic.woff2') format('woff2');
-}
-
 
 * {
   margin: 0;
@@ -43,7 +34,7 @@ html, body {
 }
 
 body {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Poppins", monospace;
   margin: 0;
 }
 
@@ -74,7 +65,7 @@ body {
   z-index: 9999;
 }
 .toast-title {
-  font-family: "Rubik Mono One", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight:  bold;
 
 
