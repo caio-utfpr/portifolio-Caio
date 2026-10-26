@@ -1,25 +1,16 @@
-@import "../../colors.scss";
-
-$gap-blocos: clamp(64px, 9vw, 120px);
+@import "colors.scss";
 
 :host {
   display: block;
   background-color: $color-secondary;
   padding-top: 1px;
   border-top: 1px solid transparent;
-
-  /* Respiro antes do rodape. Fica no :host para continuar valendo
-     quando as demais secoes voltarem. Tambem impede que a margin-bottom
-     do conteudo vaze por colapso de margem. */
   padding-bottom: 80px;
 }
 
 .servicos {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 70px 20px 0 20px;
+  padding: 80px 40px 0;
   background-color: $color-secondary;
-  color: #554949;
 }
 
 .bloco {
@@ -27,10 +18,8 @@ $gap-blocos: clamp(64px, 9vw, 120px);
 }
 
 .gap {
-  height: $gap-blocos;
+  height: 80px;
 }
-
-/* Bloco com texto a esquerda e imagem a direita */
 
 .bloco-dividido {
   display: grid;
@@ -39,44 +28,20 @@ $gap-blocos: clamp(64px, 9vw, 120px);
   align-items: center;
 }
 
-/* Tipografia dos blocos de texto */
-
 .espaco-texto {
   display: flex;
   flex-direction: column;
-  gap: 12px;
   padding-left: 45px;
-}
-
-.eyebrow {
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: $color-quinary-dark-1;
-}
-
-.titulo {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  font-size: clamp(1.75rem, 3.5vw, 3rem);
-  font-weight: 400;
-  line-height: 1.15;
-  text-transform: uppercase;
-  color: $color-support;
 }
 
 .texto {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.6;
   color: #554949;
   max-width: 60ch;
 }
-
-/* Espaco da imagem: mesmo acabamento da caixa da logo do hero original */
 
 .espaco-imagem {
   width: 100%;
@@ -105,10 +70,8 @@ $gap-blocos: clamp(64px, 9vw, 120px);
   box-sizing: border-box;
 }
 
-/* Carrossel: visual do events-section original, em largura total */
-
 .carrossel-bloco {
-  padding: 80px 8%;
+  padding: 0 40px;
   box-sizing: border-box;
   width: 100vw;
   position: relative;
@@ -119,26 +82,12 @@ $gap-blocos: clamp(64px, 9vw, 120px);
   background: linear-gradient(180deg, #bfe2f7 0%, #ffffff 100%);
 }
 
-.carrossel-cabecalho {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 40px;
-
-  .eyebrow {
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #6200ee;
-    font-size: 14px;
-  }
-
-  .titulo {
-    font-family: "Poppins", sans-serif;
-    font-size: clamp(1.6rem, 4vw, 2.8rem);
-    letter-spacing: 1px;
-    text-transform: none;
-    color: #0b2545;
-  }
+.titulo-carrossel {
+  margin: 0 0 40px;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  letter-spacing: 1px;
+  color: #0b2545;
 }
 
 .carrossel-wrapper {
@@ -250,8 +199,6 @@ $gap-blocos: clamp(64px, 9vw, 120px);
   transform: translateY(-50%);
 }
 
-/* Responsividade */
-
 @media (max-width: 960px) {
   .espaco-texto {
     padding-left: 0;
@@ -264,7 +211,7 @@ $gap-blocos: clamp(64px, 9vw, 120px);
   }
 
   .carrossel-bloco {
-    padding: 60px 4%;
+    padding: 0 16px;
   }
 
   .carrossel-wrapper .carrossel-btn {
@@ -278,18 +225,22 @@ $gap-blocos: clamp(64px, 9vw, 120px);
 
 @media (max-width: 480px) {
   :host {
-    padding-bottom: 48px;
+    padding-bottom: 36px;
   }
 
   .servicos {
-    padding: 40px 12px 0 12px;
+    padding: 36px 12px 0;
+  }
+
+  .gap {
+    height: 36px;
   }
 
   .carrossel-bloco {
-    padding: 36px 3%;
+    padding: 0 12px;
   }
 
-  .carrossel-cabecalho .titulo {
+  .titulo-carrossel {
     font-size: 1.4rem;
   }
 
