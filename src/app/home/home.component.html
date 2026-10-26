@@ -58,47 +58,4 @@
   </div>
 
   </section>
-
-  <section id="about">
-    <div class="about-content">
-      <div class="about-left">
-        <div class="about-header">
-        <span class="about-subtitle">{{templateText.about.subTitle }}</span>
-        <!-- h2 e nao h1: o h1 da pagina e o titulo do hero -->
-        <h2 class="typed-text about-title">{{templateText.about.title}}</h2>
-        <p class="about-description">{{templateText.about.description}}</p>
-        <a routerLink="/about" class="about-link">{{templateText.about.linkText}}</a>
-        </div>
-      </div>
-      <div class="about-right">
-        <div class="about-card-wrapper">
-          <div class="activity-card">
-            <div class="activity-icon-box">
-              <img [src]="templateText.about.activityIcon" alt="Atividades da Hï Tech" class="activity-icon" loading="lazy" decoding="async" />
-            </div>
-            <ul>
-              <li *ngFor="let item of templateText.about.activity">
-                {{ item }}
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="acting-bar">
-      <div class="acting-content">
-        <h3 class="acting-title">{{templateText.about.actingTitle}}</h3>
-        <div class="acting-boxes">
-          <div class="acting-item" *ngFor="let item of templateText.about.acting; let i = index">
-            <div class="acting-box">
-              <div class="value-text">
-                <h3 [appTypewriter]="item.value" [delay]="i * 500" [speed]="60"></h3>
-                <p [appTypewriter]="item.description" [delay]="i * 500 + 400" [speed]="20"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 </div>
