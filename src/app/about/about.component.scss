@@ -176,61 +176,6 @@ select option {
     font-weight: 600;
 }
 
-#aboutUs {
-  position: relative;
-  margin: 120px 0 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: left;
-  gap: 30px;
-
-  .aboutUs-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    gap: 40px;
-    padding: 50px 20px;
-    box-sizing: border-box;
-  }
-
-  .aboutUs-left {
-    flex: 1;
-    max-width: 809px;
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .aboutUs-title{
-    font-family: "Rubik Mono One", sans-serif;
-    font-size: clamp(1.8rem, 3.4vw, 2.75rem);
-    line-height: 1.15;
-    color: $color-support;
-  }
-
-  .aboutUs-subtitle {
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-    display: block;
-    color: $color-quinary;
-  }
-
-  .aboutUs-description{
-    margin-top: 20px;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #554949;
-  }
-}
-
-
 /* Cores da marca aplicadas em sequência nos cards de review */
 $review-accents: $color-tertiary, $color-quaternary, $color-primary, $color-quinary;
 
@@ -585,20 +530,6 @@ $review-accents: $color-tertiary, $color-quaternary, $color-primary, $color-quin
     box-shadow: 6px 8px 0 #4EBBC0;
   }
 
-  #aboutUs {
-    margin-top: 72px;
-
-    .aboutUs-content {
-      flex-direction: column;
-      padding: 30px 20px;
-      gap: 24px;
-    }
-
-    .aboutUs-left {
-      max-width: 100%;
-    }
-  }
-
   .events-section {
     margin-top: 60px;
     padding: 48px 4%;
@@ -650,12 +581,6 @@ $review-accents: $color-tertiary, $color-quaternary, $color-primary, $color-quin
 
     .review-grid {
       gap: 24px;
-    }
-  }
-
-  #aboutUs {
-    .aboutUs-content {
-      padding: 24px 12px;
     }
   }
 }
