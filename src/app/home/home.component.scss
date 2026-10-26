@@ -100,17 +100,7 @@ section {
   }
 
   .hero-title {
-    font-family: "Rubik Mono One", sans-serif;
-  }
-
-  .hero-subtitle {
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: $color-support;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-    display: block;
+    font-family: "Poppins", sans-serif;
   }
 
   .hero-buttons {
@@ -121,7 +111,7 @@ section {
 
     .btn-primary,
     .btn-secondary {
-      font-family: "Roboto Mono", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-size: 14px;
       font-weight: 700;
       padding: 0;
@@ -379,10 +369,6 @@ section {
 
     .hero-title {
       font-size: 1.6rem;
-    }
-
-    .hero-subtitle {
-      font-size: 12px;
     }
 
     .values-bar {
