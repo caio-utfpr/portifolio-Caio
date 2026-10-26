@@ -1,8 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Inject, Input, OnDestroy, PLATFORM_ID, ViewChild } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { templateTextService } from '@app/services/templateText.service';
-import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-about',
@@ -13,14 +10,7 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
   @Input() title: string = '';
   @Input() description: string = '';
 
-  templateText: any = {};
-
   @ViewChild('carousel') carousel!: ElementRef;
-
-  form: FormGroup;
-  isLoading = false;
-
-  private apiUrl = "https://script.google.com/macros/s/AKfycbw7bvxnEtAzzHDI5jykNIoo2iTIT0ixBY-wJigVsAqboPD5jRc7ZOBGqfeCVVQcn9deUA/exec";
 
   eventPhotos = [
     { url: 'assets/events/foto2.jpg', title: 'Encontro do time Hï Tech' },
@@ -32,7 +22,6 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
     { url: 'assets/events/foto3.jpg', title: 'Think high, think tech' }
   ];
 
-  /** Autoplay do carrossel: so roda no celular (ver ngAfterViewInit). */
   private autoplayTimer?: ReturnType<typeof setInterval>;
   private resumeTimer?: ReturnType<typeof setTimeout>;
   private mobileQuery?: MediaQueryList;
@@ -40,25 +29,14 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
   private readonly resumeDelayMs = 8000;
 
   constructor(
-    private formBuilder: FormBuilder,
-    private toastr: ToastrService,
     @Inject(PLATFORM_ID) private platformId: Object
-  ) {
-    this.form = this.formBuilder.group({
-      name: [null, [Validators.required, Validators.minLength(3)]],
-      email: [null, [Validators.required, Validators.email]],
-      period: [null, Validators.required]
-    });
-  }
+  ) {}
 
   ngAfterViewInit(): void {
-    // o site e pre-renderizado no servidor, onde window/setInterval nao
-    // existem (e o timer nem teria como ser limpo)
     if (!isPlatformBrowser(this.platformId)) {
       return;
     }
 
-    // quem pediu menos animacao no sistema nao recebe autoplay
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       return;
     }
@@ -76,7 +54,6 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
     this.mobileQuery?.removeEventListener('change', this.onBreakpointChange);
   }
 
-  /** Arrow function para manter o this ao ser usada como listener. */
   private onBreakpointChange = (): void => this.syncAutoplay();
 
   private syncAutoplay(): void {
@@ -101,10 +78,6 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
     }
   }
 
-  /**
-   * Pausa o autoplay e reagenda a volta. Chamado quando a pessoa arrasta ou
-   * usa as setas, para o carrossel nao brigar com quem esta navegando.
-   */
   pauseAutoplay(): void {
     this.stopAutoplay();
     if (this.resumeTimer) {
@@ -124,7 +97,6 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
     el.scrollTo({ left: noFim ? 0 : el.scrollLeft + passo, behavior: 'smooth' });
   }
 
-  /** Largura real de um card + o gap, lida do DOM em vez de valor fixo. */
   private cardStep(el: HTMLElement): number {
     const card = el.querySelector<HTMLElement>('.event-card');
     if (!card) {
@@ -134,43 +106,6 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
     return card.offsetWidth + gap;
   }
 
-  async publishTask() {
-    if (this.form.invalid) {
-      this.form.markAllAsTouched();
-      return;
-    }
-
-    this.isLoading = true;
-
-    const data = {
-      name: this.form.value.name,
-      email: this.form.value.email,
-      period: this.form.value.period,
-      date: new Date().toISOString()
-    };
-
-    try {
-      await fetch(this.apiUrl, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'text/plain;charset=utf-8'
-        },
-        body: JSON.stringify(data)
-      });
-
-    this.toastr.success('Mensagem enviada com sucesso!');
-    this.form.reset();
-
-    } catch (error) {
-      console.error(error);
-      this.toastr.error('Erro ao enviar mensagem.');
-
-    } finally {
-      this.isLoading = false;
-    }
-  }
-
   scrollCarousel(direction: number): void {
     const el = this.carousel?.nativeElement as HTMLElement | undefined;
     if (!el) {
@@ -178,8 +113,6 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
     }
 
     this.pauseAutoplay();
-    // passo medido do DOM: antes eram 640px fixos, mas cada card ocupa
-    // 680 + 24 de gap, entao o desalinhamento ia acumulando a cada clique
     el.scrollBy({ left: direction * this.cardStep(el), behavior: 'smooth' });
   }
 }

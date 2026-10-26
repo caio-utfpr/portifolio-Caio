@@ -1,85 +1,40 @@
 <article id="about">
-<div class="about-content">
+  <div class="about-content">
 
-  <div class="main-title">
-  <p class="subtitle">PROCESSO SELETIVO</p>
-  <h2>FAÇA<br>PARTE DA<br>HÏ-TECH</h2>
-  <p class="description">A Hï Tech é um espaço para aprender fazendo: projetos
-  reais, tecnologia aplicada e gente disposta a crescer junto.</p>
-  </div>
-
-  <div class="form-wrapper">
-    <img class="background-shape" src="assets/Frame 2.svg" alt="" aria-hidden="true" />
-
-  <div class="form-card">
-  <form [formGroup]="form" (ngSubmit)="publishTask()">
-
-      <div class="text">
-        <p>Receba o aviso da próxima seleção</p>
-      </div>
-      <div class="form-group">
-        <label for="nome">Nome</label>
-        <input
-          type="text"
-          id="nome"
-          placeholder="Digite seu nome"
-          formControlName="name">
-       </div>
-
-      <div class="form-group">
-        <label for="email">E-mail</label>
-        <input
-          type="email"
-          id="email"
-          placeholder="voce@email.com"
-          formControlName="email">
-      </div>
-
-      <div class="form-group">
-        <label for="periodo">Período da Faculdade</label>
-          <select id="periodo" formControlName="period">
-            <option value="" disabled selected>Selecione um período</option>
-            <option value="1">1º Período</option>
-            <option value="2">2º Período</option>
-            <option value="3">3º Período</option>
-            <option value="4">4º Período</option>
-            <option value="5">5º Período</option>
-            <option value="6">6º Período</option>
-            <option value="7">7º Período</option>
-            <option value="8">8º Período</option>
-            <option value="9">9º Período</option>
-            <option value="10">10º Período</option>
-          </select>
-      </div>
-
-      <button type="submit">Quero ser Avisado</button>
-    </form>
+    <div class="main-title">
+      <p class="subtitle">PROCESSO SELETIVO</p>
+      <h2>FAÇA<br>PARTE DA<br>HÏ-TECH</h2>
+      <p class="description">
+        A Hï Tech é um espaço para aprender fazendo: projetos
+        reais, tecnologia aplicada e gente disposta a crescer junto.
+      </p>
     </div>
-  </div>
   </div>
 
   <section class="events-section">
-  <div class="events-header">
-    <span class="events-subtitle">EVENTOS</span>
-    <h2 class="events-title">FOTOS DE EVENTOS</h2>
-  </div>
+    <div class="events-header">
+      <span class="events-subtitle">EVENTOS</span>
+      <h2 class="events-title">FOTOS DE EVENTOS</h2>
+    </div>
 
-  <div class="carousel-wrapper">
-    <button class="carousel-btn prev-btn" (click)="scrollCarousel(-1)" aria-label="Anterior">
-      &#10094;
-    </button>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev-btn" (click)="scrollCarousel(-1)" aria-label="Anterior">
+        &#10094;
+      </button>
+
       <div class="carousel-container" #carousel (touchstart)="pauseAutoplay()">
-      <div class="event-card" *ngFor="let photo of eventPhotos">
-        <img [src]="photo.url" [alt]="photo.title" loading="lazy" decoding="async" />
-        <div class="event-card-caption" *ngIf="photo.title">
-          <span>{{ photo.title }}</span>
+        <div class="event-card" *ngFor="let photo of eventPhotos">
+          <img [src]="photo.url" [alt]="photo.title" loading="lazy" decoding="async" />
+          <div class="event-card-caption" *ngIf="photo.title">
+            <span>{{ photo.title }}</span>
+          </div>
         </div>
       </div>
+
+      <button class="carousel-btn next-btn" (click)="scrollCarousel(1)" aria-label="Próximo">
+        &#10095;
+      </button>
     </div>
-    <button class="carousel-btn next-btn" (click)="scrollCarousel(1)" aria-label="Próximo">
-      &#10095;
-    </button>
-  </div>
-</section>
+  </section>
 
 </article>
