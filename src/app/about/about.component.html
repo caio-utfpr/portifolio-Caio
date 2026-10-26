@@ -41,30 +41,4 @@
     </div>
   </section>
 
-  <section class="events-section">
-    <div class="events-header">
-      <span class="events-subtitle">EVENTOS</span>
-      <h2 class="events-title">FOTOS DE EVENTOS</h2>
-    </div>
-
-    <div class="carousel-wrapper">
-      <button class="carousel-btn prev-btn" (click)="scrollCarousel(-1)" aria-label="Anterior">
-        &#10094;
-      </button>
-
-      <div class="carousel-container" #carousel (touchstart)="pauseAutoplay()">
-        <div class="event-card" *ngFor="let photo of eventPhotos">
-          <img [src]="photo.url" [alt]="photo.title" loading="lazy" decoding="async" />
-          <div class="event-card-caption" *ngIf="photo.title">
-            <span>{{ photo.title }}</span>
-          </div>
-        </div>
-      </div>
-
-      <button class="carousel-btn next-btn" (click)="scrollCarousel(1)" aria-label="Próximo">
-        &#10095;
-      </button>
-    </div>
-  </section>
-
 </article>
