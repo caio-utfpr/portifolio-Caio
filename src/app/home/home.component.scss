@@ -4,7 +4,6 @@
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
-  // font-family: "Overpass", sans-serif;
   color: $color-support;
   background-color: $color-secondary;
 }
@@ -60,7 +59,7 @@ section {
   background-color: $color-secondary;
   gap: 60px;
 
-   .hero-content {
+  .hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -96,18 +95,11 @@ section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    text-align: left;         
+    text-align: left;
     gap: 32px;
   }
 
-  .hero-buttons {
-    display: flex;
-    gap: 16px;
-    margin-top: 0;   // o espaçamento agora vem do gap do hero-right
-    flex-wrap: wrap;
-  }
-
-    .hero-title {
+  .hero-title {
     font-family: "Rubik Mono One", sans-serif;
   }
 
@@ -123,62 +115,47 @@ section {
 
   .hero-buttons {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 16px;
-    margin-top: 32px;
-    flex-wrap: wrap;
 
-    /* viraram <a routerLink> para navegar de verdade (e para o crawler seguir),
-       por isso o seletor nao e mais `button` */
     .btn-primary,
     .btn-secondary {
       font-family: "Roboto Mono", sans-serif;
       font-size: 14px;
       font-weight: 700;
-      padding: 12px 24px;
-      border-radius: 8px;
+      padding: 0;
+      background: none;
+      border: none;
+      box-shadow: none;
       cursor: pointer;
       transition: all 0.2s ease;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      text-decoration: none;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-align: left;
+
+      &:hover {
+        transform: none;
+        box-shadow: none;
+      }
+
+      &:active {
+        transform: none;
+        box-shadow: none;
+      }
     }
 
     .btn-primary {
-      background-color: #2b7fff;
-      color: #ffffff;
-      border: 2px solid #0046b3;
-      box-shadow: 4px 4px 0px #0046b3;
-
-      &:hover {
-        transform: translateY(-2px);
-        box-shadow: 5px 6px 0px #0046b3;
-      }
-
-      &:active {
-        transform: translateY(2px);
-        box-shadow: 1px 1px 0px #0046b3;
-      }
+      color: #0b2545;
     }
 
     .btn-secondary {
-      background-color: #ffffff;
       color: #0b2545;
-      border: 2px solid #00f2fe;
-      box-shadow: 4px 4px 0px #00f2fe;
-
-      &:hover {
-        transform: translateY(-2px);
-        box-shadow: 5px 6px 0px #00f2fe;
-      }
-
-      &:active {
-        transform: translateY(2px);
-        box-shadow: 1px 1px 0px #00f2fe;
-      }
     }
   }
+
   .team-card-wrapper {
     position: relative;
     width: 100%;
@@ -198,6 +175,7 @@ section {
       border-radius: 12px;
     }
   }
+
   .team-card {
     background-color: white;
     border: 2px solid #000000;
@@ -277,7 +255,6 @@ section {
     gap: 12px;
   }
 
-
   .value-icon-box {
     background-color: #ffb703;
     border: 2.5px solid #000000;
@@ -288,14 +265,13 @@ section {
     justify-content: center;
     align-items: center;
     box-shadow: 2px 2px 0px #000000;
-    transition :transform 0.6s ease, all 0.6s ease;
-    &:hover
-    {
+    transition: transform 0.6s ease, all 0.6s ease;
+
+    &:hover {
       transform: translateY(-7px);
     }
 
     .value-icon {
-      // Para alterar a cor modificar o valor de fill para #0b2545 no próprio SVG;
       width: 22px;
       height: 22px;
       object-fit: contain;
@@ -335,12 +311,6 @@ section {
   }
 }
 
-
-/* =====================================================
-   RESPONSIVIDADE - Notebooks, tablets e celulares
-   ===================================================== */
-
-/* Notebooks e telas médias */
 @media (max-width: 1024px) {
   section {
     padding: 60px 20px;
@@ -361,7 +331,6 @@ section {
   }
 }
 
-/* Tablets e celulares grandes */
 @media (max-width: 768px) {
   section {
     padding: 48px 16px;
@@ -388,13 +357,6 @@ section {
       font-size: 2rem;
     }
 
-    .hero-buttons .btn-primary,
-    .hero-buttons .btn-secondary {
-      flex: 1;
-      min-width: 140px;
-    }
-
-    /* Barra de valores empilha verticalmente */
     .values-bar {
       flex-direction: column;
       gap: 24px;
@@ -403,7 +365,6 @@ section {
   }
 }
 
-/* Celulares */
 @media (max-width: 480px) {
   section {
     padding: 36px 12px;
@@ -422,15 +383,6 @@ section {
 
     .hero-subtitle {
       font-size: 12px;
-    }
-
-    .hero-buttons {
-      flex-direction: column;
-
-      .btn-primary,
-      .btn-secondary {
-        width: 100%;
-      }
     }
 
     .values-bar {
