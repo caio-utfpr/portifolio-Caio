@@ -76,9 +76,18 @@ section {
     text-align: left;
   }
 
+  .hero-top h1 {
+    font-size: 5rem;
+  }
+
+  .hero-top p {
+    font-size: 0.9rem;
+  }
+
   .hero-left {
     grid-area: left;
     min-width: 0;
+    max-width: 550px;
   }
 
   .hero-right {
@@ -86,7 +95,9 @@ section {
     min-width: 0;
     display: flex;
     flex-direction: column;
-    gap: 32px;   // espaço entre o texto e os botões
+    align-items: flex-start;
+    text-align: left;         
+    gap: 32px;
   }
 
   .hero-buttons {
