@@ -158,47 +158,4 @@
     </div>
   </section>
 
-  <section id="contact">
-    <div class="contact-card">
-      <div class="contact-left">
-        <p class="contact-pretitle">VAMOS CONVERSAR?</p>
-        <h2>TEM UM DESAFIO? NÓS TEMOS A SOLUÇÃO.</h2>
-        <p class="contact-description">
-          Fale com a Hï Tech e descubra como podemos transformar sua ideia em um produto digital com impacto.
-        </p>
-      </div>
-      <form class="contact-right" [formGroup]="form" (ngSubmit)="publishTask()">
-        <div class="field-group">
-          <label class="label-nome" for="name">Nome</label>
-          <input id="name" type="text" placeholder="Seu nome" formControlName="name" />
-          <div *ngIf="form.get('name')?.touched && form.get('name')?.invalid">
-            <small *ngIf="form.get('name')?.errors?.['required']">Nome é obrigatório.</small>
-            <small *ngIf="form.get('name')?.errors?.['minlength']">Nome muito curto.</small>
-          </div>
-        </div>
-        <div class="field-group">
-          <label class="label-email" for="email">E-mail</label>
-          <input id="email" type="email" placeholder="voce@email.com" formControlName="email" />
-          <div *ngIf="form.get('email')?.touched && form.get('email')?.invalid">
-            <small *ngIf="form.get('email')?.errors?.['required']">Email é obrigatório.</small>
-            <small *ngIf="form.get('email')?.errors?.['email']">Email inválido.</small>
-          </div>
-        </div>
-        <div class="field-group">
-          <label class="label-mensagem" for="description">Mensagem</label>
-          <textarea id="description" placeholder="Conte rapidamente o que você precisa" formControlName="description"></textarea>
-          <div *ngIf="form.get('description')?.touched && form.get('description')?.invalid">
-            <small *ngIf="form.get('description')?.errors?.['required']">Mensagem é obrigatória.</small>
-            <small *ngIf="form.get('description')?.errors?.['minlength']">Mensagem muito curta.</small>
-          </div>
-        </div>
-        <button type="submit" [disabled]="form.invalid || isLoading">
-          <ng-container *ngIf="!isLoading">Enviar mensagem</ng-container>
-          <ng-container *ngIf="isLoading">
-            <span class="spinner"></span> Enviando...
-          </ng-container>
-        </button>
-      </form>
-    </div>
-  </section>
 </div>
