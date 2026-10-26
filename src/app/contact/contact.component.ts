@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { Observable } from 'rxjs';
+import { templateTextService } from '../services/templateText.service';
 
 @Component({
   selector: 'app-contact',
@@ -11,13 +13,18 @@ export class ContactComponent {
 
   form: FormGroup;
   isLoading = false;
+  dados$: Observable<any>;
 
+  /*COLOCAR MEU LINK AINDA ==========================================================================================*/
   private apiUrl = "https://script.google.com/macros/s/AKfycbwSrUCO9dx6bTOBEjaUHYMgQ0i6nblIku5bquQoOYDmioYzmjCd1PNG_Io__eYXsn-i7Q/exec";
 
   constructor(
     private formBuilder: FormBuilder,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private templateText: templateTextService
   ) {
+    this.dados$ = this.templateText.templateText$;
+
     this.form = this.formBuilder.group({
       name: [null, [Validators.required, Validators.minLength(3)]],
       email: [null, [Validators.required, Validators.email]],
