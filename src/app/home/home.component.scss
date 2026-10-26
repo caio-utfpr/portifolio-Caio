@@ -55,33 +55,45 @@ section {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  text-align: left;
+  text-align: right;
   padding: 80px 30px;
   background-color: $color-secondary;
   gap: 60px;
 
-  .hero-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+   .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "top   top"
+      "left  right";
     align-items: center;
-    width: 100%;
     gap: 40px;
+    width: 100%;
+  }
+
+  .hero-top {
+    grid-area: top;
+    text-align: left;
   }
 
   .hero-left {
-    flex: 0.4;
-    align-items: left;
-    max-width: 500px;
+    grid-area: left;
+    min-width: 0;
   }
 
   .hero-right {
-    flex: 1;
+    grid-area: right;
+    min-width: 0;
     display: flex;
-    justify-content: center;
-    align-items: right;
-    width: 100%;
-    max-width: 900px;
+    flex-direction: column;
+    gap: 32px;   // espaço entre o texto e os botões
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 0;   // o espaçamento agora vem do gap do hero-right
+    flex-wrap: wrap;
   }
 
     .hero-title {
@@ -167,8 +179,8 @@ section {
       content: "";
       position: absolute;
       top: 6px;
-      left: 6px;
-      right: -6px;
+      right: 6px;
+      left: -6px;
       bottom: -6px;
       background-color: #6200ee;
       z-index: -1;
@@ -235,7 +247,7 @@ section {
     .pattern-overlay {
       position: absolute;
       top: -20px;
-      right: 10px;
+      left: 10px;
       width: 220px;
       height: auto;
       opacity: 0.12;
@@ -300,7 +312,7 @@ section {
 .typewriter-cursor::after {
   content: "|";
   display: inline-block;
-  margin-left: 2px;
+  margin-right: 2px;
   color: $color-primary;
   animation: blink-caret 0.75s step-end infinite;
 }
@@ -353,49 +365,22 @@ section {
     gap: 32px;
 
     .hero-content {
-      flex-direction: column;
-      align-items: stretch;
-      /* a coluna passa a ter 5 itens (ver display: contents abaixo), então o
-         espaçamento é dado por margem em cada um, e não por um gap único */
-      gap: 0;
-    }
-
-    /* promove os filhos de .hero-left/.hero-header a itens do flex da coluna,
-       o que permite encaixar a foto entre o subtítulo e o título via order */
-    .hero-left,
-    .hero-header {
-      display: contents;
-    }
-
-    .hero-subtitle {
-      order: 1;
-      /* o margin-bottom de 16px vem da regra base */
-    }
-
-    .hero-right {
-      order: 2;
-      max-width: 100%;
-      margin-bottom: 24px;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "top"
+        "left"
+        "right";
+      gap: 32px;
     }
 
     .hero-title {
-      order: 3;
       font-size: 2rem;
-      margin-bottom: 16px;
     }
 
-    .hero-description-fallback {
-      order: 4;
-    }
-
-    .hero-buttons {
-      order: 5;
-
-      .btn-primary,
-      .btn-secondary {
-        flex: 1;
-        min-width: 140px;
-      }
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+      flex: 1;
+      min-width: 140px;
     }
 
     /* Barra de valores empilha verticalmente */

@@ -1,61 +1,67 @@
 <div class="scroll-container">
 
-<section id="hero">
-  <div class="hero-content">
-    <div class="hero-left">
-      <div class="hero-header">
-        <span class="hero-subtitle">{{ templateText.heroSubtitle }}</span>
-        <h1 class="typed-text hero-title">{{ templateText.heroTitle}}</h1>
-        <p class="hero-description-fallback">{{ templateText.heroDescription }}</p>
+  <section id="hero">
+    <div class="hero-content">
+
+      <div class="hero-top">
+        <h1>Caio Siqueira</h1>
+        <p>Aluno de engenharia &bull; Desenvolvedor web</p>
       </div>
 
-    <div class="hero-buttons">
-      <a class="btn-primary" routerLink="/services">
-        {{ templateText.btnServicesText }}
-      </a>
-      <a class="btn-secondary" routerLink="/contact">
-        {{ templateText.btnContactText }}
-      </a>
-    </div>
-  </div>
-
-  <div class="hero-right">
-      <div class="team-card-wrapper">
-        <div class="team-card">
-          <div class="image-container">
-            <!-- srcset/sizes: o navegador baixa so o tamanho que a tela usa.
-                 width/height refletem a proporcao real (16:9) para reservar
-                 o espaco antes da imagem chegar. -->
-            <img
-              [src]="templateText.heroImage.src"
-              [attr.srcset]="templateText.heroImage.srcset"
-              [attr.sizes]="templateText.heroImage.sizes"
-              [alt]="templateText.heroImage.alt"
-              width="1600"
-              height="900"
-              fetchpriority="high"
-              decoding="async" />
-          </div>
-          <div class="team-caption">
-            <span>{{ templateText.heroImage.caption }}</span>
+      <div class="hero-left">
+        <div class="team-card-wrapper">
+          <div class="team-card">
+            <div class="image-container">
+              <!-- srcset/sizes: o navegador baixa só o tamanho que a tela usa.
+                   width/height refletem a proporção real (16:9) para reservar
+                   o espaço antes da imagem chegar. -->
+              <img
+                [src]="templateText.heroImage.src"
+                [attr.srcset]="templateText.heroImage.srcset"
+                [attr.sizes]="templateText.heroImage.sizes"
+                [alt]="templateText.heroImage.alt"
+                width="1600"
+                height="900"
+                fetchpriority="high"
+                decoding="async" />
+            </div>
+            <div class="team-caption">
+              <span>{{ templateText.heroImage.caption }}</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="values-bar">
-   <img src="assets/padrao-azul-escuro-ciano.svg" alt="" class="pattern-overlay" aria-hidden="true" />
-    <div class="value-item" *ngFor="let feature of templateText.features; let i = index">
-      <div class="value-icon-box">
-        <img [src]="feature.icon" [alt]="feature.title" class="value-icon" loading="lazy" decoding="async" />
-      </div>
-      <div class="value-text">
-        <h3 [appTypewriter]="feature.title" [delay]="i * 300" [speed]="75"></h3>
-        <p [appTypewriter]="feature.description" [delay]="i * 300 + 500" [speed]="25"></p>
+      <div class="hero-right">
+        <div class="hero-header">
+          <span class="hero-subtitle">{{ templateText.heroSubtitle }}</span>
+          <h2 class="typed-text hero-title">{{ templateText.heroTitle }}</h2>
+          <p class="hero-description-fallback">{{ templateText.heroDescription }}</p>
+        </div>
+
+        <div class="hero-buttons">
+          <a class="btn-primary" routerLink="/services">
+            {{ templateText.btnServicesText }}
+          </a>
+          <a class="btn-secondary" routerLink="/contact">
+            {{ templateText.btnContactText }}
+          </a>
+        </div>
       </div>
     </div>
-  </div>
 
+    <div class="values-bar">
+      <img src="assets/padrao-azul-escuro-ciano.svg" alt="" class="pattern-overlay" aria-hidden="true" />
+      <div class="value-item" *ngFor="let feature of templateText.features; let i = index">
+        <div class="value-icon-box">
+          <img [src]="feature.icon" [alt]="feature.title" class="value-icon" loading="lazy" decoding="async" />
+        </div>
+        <div class="value-text">
+          <h3 [appTypewriter]="feature.title" [delay]="i * 300" [speed]="75"></h3>
+          <p [appTypewriter]="feature.description" [delay]="i * 300 + 500" [speed]="25"></p>
+        </div>
+      </div>
+    </div>
   </section>
+
 </div>
