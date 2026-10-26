@@ -51,19 +51,7 @@
           { "value": "8" ,
             "description": "frentes de serviço" }
         ]
-      },
-    "Services": {
-      "list": [
-      ]
-    },
-    "Costumers": {
-      "sectionTitle": "Clientes",
-      "list": []
-    },
-    "Partners": {
-      "sectionTitle": "Parceiros",
-      "list": []
-    }
+      }
   },
   "about": {
     "title": "Sobre Nós",
