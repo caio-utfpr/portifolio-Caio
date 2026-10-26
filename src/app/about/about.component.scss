@@ -235,42 +235,57 @@
 }
 
 .about-block {
-  max-width: 1100px;
-  margin: 0 auto 96px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 120px;
 }
 
-.sec-title {
-  font-family: "Poppins", sans-serif;
-  font-size: clamp(1.8rem, 4vw, 3.2rem);
-  color: #09254D;
-  margin: 8px 0 16px;
-  line-height: 1.1;
+.about-block .subtitle {
+  text-decoration: underline;
+  font-size: 56px;
+  line-height: 1.2;
+  margin: 0 0 20px;
+}
+
+.about-block .description {
+  font-size: 22px;
+  line-height: 1.6;
 }
 
 .intro-head {
-  display: grid;
-  grid-template-columns: 1fr minmax(0, 420px);
-  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
   gap: 40px;
 }
 
+.intro-head > div {
+  flex: 1;
+  min-width: 0;
+}
+
 .intro-img {
-  width: 100%;
+  flex-shrink: 0;
+  width: 380px;
+  max-width: 45%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  background-color: #bfe2f7;
   border: 2.5px solid #000000;
   border-radius: 12px;
   box-shadow: 6px 6px 0px #000000;
 }
 
 .intro-text {
-  margin-top: 32px;
+  margin: auto 0 0;   /* empurra o texto para a base da coluna, alinhado com a imagem */
   font-family: "Poppins", sans-serif;
-  font-size: 13px;
+  font-size: 20px;
   line-height: 1.7;
   color: #554949;
+  text-align: left;
 }
 
+/* 2. ofício */
 .about-craft {
   display: grid;
   grid-template-columns: 56px 1fr 56px;
@@ -295,6 +310,7 @@
   background-color: #bfe2f7;
 }
 
+/* 3. hobbies */
 .hobby-photos {
   margin-top: 24px;
   display: grid;
@@ -314,11 +330,27 @@
 
 /* responsivo das seções */
 @media (max-width: 768px) {
+  .about-block .subtitle {
+    font-size: 40px;
+  }
+
+  .about-block .sec-title {
+    font-size: 28px;
+  }
+
+  .about-block .description,
+  .intro-text {
+    font-size: 18px;
+  }
+
   .intro-head {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .intro-img {
+    width: 100%;
+    max-width: 100%;
     aspect-ratio: 4 / 3;
   }
 
@@ -332,36 +364,6 @@
 
   .hobby-photos {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-/* =====================================================
-   RESPONSIVIDADE - About
-   ===================================================== */
-
-@media (max-width: 1024px) {
-  #about {
-    padding: 60px 24px 0;
-  }
-
-  .about-content {
-    gap: 30px;
-  }
-
-  .form-wrapper {
-    margin-top: 40px;
-    max-width: 100%;
-  }
-
-  .form-card {
-    width: 100%;
-    max-width: 100%;
-  }
-
-
-
-  .events-section {
-    margin-top: 80px;
-    padding: 60px 5%;
   }
 }
 
