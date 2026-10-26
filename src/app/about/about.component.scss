@@ -301,18 +301,23 @@
 .hobby-photos {
   margin-top: 24px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 16px;
-  max-width: 640px;
+  grid-template-columns: repeat(3, 140px);
+  gap: 32px;
+  align-items: center;
 }
 
 .hobby-photos img {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border: 2px solid #000000;
-  border-radius: 8px;
-  box-shadow: 3px 3px 0px #000000;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.hobby-photos img:nth-child(1) {
+  width: 90px; //tamanho do tripé
 }
 
 /* responsivo das seções */
@@ -350,7 +355,8 @@
   }
 
   .hobby-photos {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 100px);
+    gap: 20px;
   }
 }
 
