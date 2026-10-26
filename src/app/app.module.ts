@@ -10,7 +10,6 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
 import { CoreComponent } from './core/core.component';
-import { FooterComponent } from './footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
@@ -32,7 +31,6 @@ import { TypewriterDirective } from './typewriter.directive';
     AboutComponent,
     ContactComponent,
     ServicesComponent,
-    FooterComponent,
     WhatsappButtonComponent,
     TypewriterDirective,
     // SuccessCasesComponent,  <- ver comentario no import acima

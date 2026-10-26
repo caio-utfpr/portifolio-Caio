@@ -58,28 +58,6 @@
     "sectionTitle": "Título da Seção Sobre",
     "sectionContent": "Conteúdo da seção sobre."
   },
-  "footer": {
-    "RedesSociais": [
-      {
-        "nome": "LinkedIn",
-        "url": "https://www.linkedin.com/company/hïtech/",
-        "icon": "assets/linkedinNovo.svg"
-      },
-      {
-        "nome": "Instagram",
-        "url": "https://www.instagram.com/_caiosiqueira._/",
-        "icon": "assets/instagramNovo.svg"
-      }
-    ],
-    "title": "Fale Conosco",
-    "description": "Entre em contato conosco.",
-    "email": "Email: caio.2026@alunos.utfpr.edu.br",
-    "telefone": "Telefone: (41) 99850-5198",
-    "divTitle1": "Hï Tech",
-    "endereco": "Sete de Setembro, 3165, Rebouças, Curitiba - Paraná, CEP 80230-901",
-    "cnpj": "CNPJ: 58.322.883/0001-36",
-    "footerBottom": "Hï Tech. Todos os direitos reservados."
-  },
   "whatsapp": {
     "whatsappNumberLink": "https://wa.me/5514997317570",
     "whatsappText": "Entre em contato",
