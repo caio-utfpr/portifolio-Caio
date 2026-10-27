@@ -1,6 +1,6 @@
 :host {
   display: block;
-  background-color: #f1edec;
+  background-color: color-secondary;
 }
 
 .contato {
@@ -33,12 +33,12 @@
   align-items: center;
   gap: 8px;
   padding: 8px 14px;
-  border: 1px solid #b5c4b1;
+  border: 1px solid #5b3434;
   border-radius: 8px;
   background: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #5a6b5a;
+  color: #5b3434;
   text-decoration: none;
   transition: transform 0.2s ease;
 
@@ -74,7 +74,7 @@
     width: 100%;
     box-sizing: border-box;
     padding: 16px 20px;
-    border: 1px solid #b5c4b1;
+    border: 1px solid #5b3434;
     border-radius: 8px;
     background: #ffffff;
     font-family: "Poppins", sans-serif;
@@ -105,7 +105,7 @@
     padding: 18px 36px;
     border: none;
     border-radius: 8px;
-    background: #b8c9b1;
+    background: #92673c;
     font-family: "Poppins", sans-serif;
     font-size: 18px;
     letter-spacing: 1px;
@@ -115,11 +115,12 @@
     transition: background 0.2s ease;
 
     &:hover {
-      background: #a9bca2;
+      background: darken(#92673c, 8%);
     }
 
     &:disabled {
-      background: #d5dfd2;
+      background: #92673c;
+      opacity: 0.5;
       cursor: not-allowed;
     }
   }
