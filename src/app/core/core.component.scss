@@ -16,7 +16,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: #f4f4f4;
+  background-color: $color-secondary-dark-2;
   padding: 10px 20px;
   box-sizing: border-box;
   border-bottom: 1px solid #dcdcdc;
@@ -41,7 +41,7 @@ nav {
 
   li {
     a {
-      color: $color-secondary-hover;
+      color: $color-secondary-light-1;
       text-decoration: none;
       font-weight: bold;
       font-family: inherit;
@@ -51,7 +51,7 @@ nav {
 
       &:hover, &.active {
         color: $color-primary;
-        border-bottom: 2px solid $color-secondary-dark-2;
+        border-bottom: 2px solid $color-secondary-dark-1;
         cursor: pointer;
       }
     }

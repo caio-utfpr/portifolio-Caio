@@ -60,11 +60,9 @@
   margin-left: 80px;
   width: 100%;
   aspect-ratio: 3 / 3;
+  //todo?
   background: linear-gradient(225deg, $color-primary, #D3FCFF);
-  border: 1px solid $color-primary;
-  border-radius: 8px;
-  box-shadow: 8px 8px 0px $color-tertiary;
-  box-sizing: border-box;
+  border: none;
 }
 
 .espaco-imagem img {
@@ -89,7 +87,7 @@
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  background: linear-gradient(180deg, #bfe2f7 0%, #ffffff 100%);
+  background: linear-gradient(180deg, $color-secondary 0%, $color-primary 75%, $color-secondary 100%);
 }
 
 .titulo-carrossel {
