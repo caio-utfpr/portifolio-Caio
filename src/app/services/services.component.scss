@@ -61,7 +61,7 @@
   width: 100%;
   aspect-ratio: 3 / 3;
   background: linear-gradient(225deg, $color-primary, #D3FCFF);
-  border: 1px solid $color-support;
+  border: 1px solid $color-primary;
   border-radius: 8px;
   box-shadow: 8px 8px 0px $color-tertiary;
   box-sizing: border-box;
@@ -74,7 +74,7 @@
   aspect-ratio: 3 / 3;
   object-fit: cover;
   background-color: #ffffff;
-  border: 1px solid $color-support;
+  border: 1px solid $color-primary;
   border-radius: 8px;
   box-shadow: 8px 8px 0px $color-tertiary;
   box-sizing: border-box;
