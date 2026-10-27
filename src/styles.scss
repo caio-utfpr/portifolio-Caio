@@ -30,6 +30,7 @@
 
 html, body {
   overflow-x: hidden;
+  background-color: $color-secondary;
   width: 100%;
 }
 
@@ -67,7 +68,4 @@ body {
 .toast-title {
   font-family: "Poppins", sans-serif;
   font-weight:  bold;
-
-
 }
-
