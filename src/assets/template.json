@@ -18,17 +18,17 @@
     },
     "features": [
       {
-        "icon": "assets/feature-1.svg",
+        "icon": "assets/icone-c.svg",
         "title": "Excelência técnica",
         "description": "Aplicamos boas práticas para entregar soluções seguras, escaláveis e fáceis de evoluir."
       },
       {
-        "icon": "assets/feature-2.svg",
+        "icon": "assets/icone-arroba.svg",
         "title": "Pessoas no centro",
         "description": "Acreditamos em aprendizado, colaboração e protagonismo em todas as etapas do projeto."
       },
       {
-        "icon": "assets/feature-3.svg",
+        "icon": "assets/icone-fig.svg",
         "title": "Impacto real",
         "description": "Geramos valor para empresas, clientes e comunidade por meio de tecnologia aplicada."
       }
