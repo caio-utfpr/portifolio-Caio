@@ -92,7 +92,8 @@
 .about-block {
   width: 100%;
   max-width: 900px;
-  margin: 0 auto 120px;
+  margin: 0 auto;
+  padding-bottom: 120px;
 }
 
 .about-block .subtitle {
@@ -157,7 +158,7 @@
   margin-top: 24px;
   display: grid;
   grid-template-columns: repeat(3, 140px);
-  gap: 32px;
+  gap: 50px;
   align-items: center;
 }
 
@@ -211,30 +212,12 @@
 
   .hobby-photos {
     grid-template-columns: repeat(3, 100px);
-    gap: 20px;
   }
 }
 
 @media (max-width: 768px) {
   #about {
     padding: 48px 16px 0;
-  }
-
-  /* O vao entre o titulo e o formulario vinha de tres regras somadas
-     (gap 30 + margin do wrapper 40 + margin do card 24 = 94px). Aqui as duas
-     margens zeram e o espacamento fica so no gap, num numero unico. */
-  .about-content {
-    gap: 36px;
-  }
-
-  .form-wrapper {
-    margin-top: 0;
-  }
-
-  .form-card {
-    margin-top: 0;
-    padding: 24px;
-    box-shadow: 6px 8px 0 #4EBBC0;
   }
 }
 
@@ -245,17 +228,5 @@
 
   .main-title h2 {
     font-size: clamp(1.6rem, 6vw, 2.5rem);
-  }
-
-  .form-card {
-    padding: 20px 16px;
-  }
-
-  #review-cards {
-    padding: 0 12px;
-
-    .review-grid {
-      gap: 24px;
-    }
   }
 }
