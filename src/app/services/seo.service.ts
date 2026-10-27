@@ -10,7 +10,8 @@ export interface SeoData {
 
 @Injectable({ providedIn: 'root' })
 export class SeoService {
-  private readonly siteName = 'Hï Tech';
+  private readonly siteName = 'Caio Siqueira';
+  /*TODO*/
   private readonly baseUrl = 'https://hitech.org.br';
 
   constructor(

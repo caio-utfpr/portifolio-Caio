@@ -9,14 +9,14 @@ import { SeoService, SeoData } from './services/seo.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'site-hitech';
+  title = 'portifolio Caio';
   // O conteúdo já é carregado no APP_INITIALIZER, então não há mais tela de loading.
   loading = false;
 
   private readonly defaultSeo: SeoData = {
-    title: 'Empresa Júnior de Tecnologia e Soluções Digitais',
+    title: 'Página inicial',
     description:
-      'A Hï Tech cria sites, sistemas web, automações e design de produto. Tire seu projeto do papel com uma empresa júnior de tecnologia.',
+    'Desenvolvo sites, sistemas web, automações e design de produto.'
   };
 
   constructor(

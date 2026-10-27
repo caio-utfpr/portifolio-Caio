@@ -12,9 +12,9 @@ const routes: Routes = [
     component: HomeComponent,
     data: {
       seo: {
-        title: 'Empresa Júnior de Tecnologia e Soluções Digitais',
+        title: 'Página inicial',
         description:
-          'A Hï Tech cria sites, sistemas web, aplicativos mobile e automações. Tire seu projeto do papel com uma empresa júnior de tecnologia.',
+          'Desenvolvo sites, sistemas web, automações e design de produto.',
       },
     },
   },
@@ -23,9 +23,9 @@ const routes: Routes = [
     component: AboutComponent,
     data: {
       seo: {
-        title: 'Sobre Nós e Processo Seletivo',
+        title: 'Sobre Mim',
         description:
-          'Somos uma empresa júnior que cria soluções digitais enquanto forma profissionais melhores. Conheça a Hï Tech e faça parte do time.',
+          'Conheça um pouco sobre minha trajetória, trabalho e gostos',
       },
     },
   },
@@ -34,9 +34,9 @@ const routes: Routes = [
     component: ServicesComponent,
     data: {
       seo: {
-        title: 'Serviços: Sites, Sistemas Web e Automações',
+        title: 'Trabalhos',
         description:
-          'Sites e sistemas web, sistemas legados, apps mobile, e-commerce, automações, análise de dados, autoatendimento e configuração de e-mail, domínio e hospedagem.',
+          'Conheça os trabalhos que eu já fiz',
       },
     },
   },
@@ -45,9 +45,9 @@ const routes: Routes = [
     component: ContactComponent,
     data: {
       seo: {
-        title: 'Contato e Briefing',
+        title: 'Contato',
         description:
-          'Envie um briefing para a Hï Tech. Conte o que sua empresa precisa e proporemos um caminho de desenvolvimento.',
+          'Envie uma mensagem para mim',
       },
     },
   },
