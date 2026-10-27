@@ -2,7 +2,6 @@ import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { templateTextService } from './services/templateText.service';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
-import { WhatsappButtonComponent } from './whatsapp-button/whatsapp-button.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -31,7 +30,6 @@ import { TypewriterDirective } from './typewriter.directive';
     AboutComponent,
     ContactComponent,
     ServicesComponent,
-    WhatsappButtonComponent,
     TypewriterDirective,
     // SuccessCasesComponent,  <- ver comentario no import acima
   ],

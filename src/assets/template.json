@@ -59,8 +59,6 @@
     "sectionContent": "Conteúdo da seção sobre."
   },
   "whatsapp": {
-    "whatsappNumberLink": "https://wa.me/5514997317570",
-    "whatsappText": "Entre em contato",
-    "whatsappLogoPath": "assets/whatsappLogo.svg"
+    "whatsappNumberLink": "https://wa.me/5514997317570"
   }
 }
