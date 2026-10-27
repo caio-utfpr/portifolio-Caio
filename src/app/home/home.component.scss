@@ -76,8 +76,18 @@ section {
   }
 
   .hero-top h1 {
-    font-size: 5rem;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  &::after {
+    content: "";
+    flex: 1;            
+    height: 7px;
+    background: linear-gradient(90deg, #0b2545 0%, $color-secondary-dark-1 100%);
   }
+}
 
   .hero-top p {
     font-size: 0.9rem;
@@ -343,6 +353,10 @@ section {
       flex-direction: column;
       gap: 24px;
       padding: 24px;
+    }
+    
+    .hero-top h1::after {
+      display: none;
     }
   }
 }
