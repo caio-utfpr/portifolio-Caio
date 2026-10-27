@@ -1,8 +1,8 @@
 {
   "core": {
-    "LogoEmpresa": {
+    "LogoPortifolio": {
       "src": "assets/logo-cafe.png",
-      "alt": "Logo da empresa Hï Tech"
+      "alt": "Logo do portifólio"
     }
   },
   "home": {
@@ -14,7 +14,7 @@
       "src": "assets/img-home-1200.jpg",
       "srcset": "assets/img-home-800.jpg 800w, assets/img-home-1200.jpg 1200w, assets/img-home-1600.jpg 1600w, assets/img-home-2000.jpg 2000w",
       "sizes": "(max-width: 768px) calc(100vw - 68px), (max-width: 1400px) 50vw, 864px",
-      "alt": "Equipe Hï Tech reunida segurando a bandeira da empresa",
+      "alt": "TODO -> Equipe Hï Tech reunida segurando a bandeira da empresa",
       "caption": ">> Times que constroem o futuro"
     },
     "features": [
@@ -33,30 +33,7 @@
         "title": "Impacto real",
         "description": "Geramos valor para empresas, clientes e comunidade por meio de tecnologia aplicada."
       }
-    ],
-    "about": {
-        "subTitle": "Quem somos",
-        "title": "A hï tech conecta talento universitário e mercado para desenvolver soluções digitais de impacto.",
-        "description":"Somos uma empresa júnior de tecnologia formada por estudantes que vivem projetos reais desde o primeiro contato com o cliente até a entrega final. Nosso trabalho combina método, comunicação e energia jovem para resolver problemas com clareza.",
-        "linkText": "Conheça a empresa",
-        "activityIcon" : "assets/logo-cafe.png",
-        "activity":["Atuação prática em desenvolvimento, design e gestão.", "Projetos pensados para resolver dores reais do cliente.","Formação de profissionais preparados para o mercado."],
-        "actingTitle" : "Nossa atuação",
-        "acting" : [
-          { "value": "+10" ,
-            "description": "projetos entregues" },
-          { "value": "+10" ,
-            "description": "membros formados" },
-          { "value": "8" ,
-            "description": "frentes de serviço" }
-        ]
-      }
-  },
-  "about": {
-    "title": "Sobre Nós",
-    "description": "Saiba mais sobre nós nesta página.",
-    "sectionTitle": "Título da Seção Sobre",
-    "sectionContent": "Conteúdo da seção sobre."
+    ]
   },
   "whatsapp": {
     "whatsappNumberLink": "https://wa.me/5514997317570"
