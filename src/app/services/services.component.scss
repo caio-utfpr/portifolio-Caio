@@ -120,6 +120,14 @@ $recuo-texto: 125px;
   background: linear-gradient(180deg, $color-secondary 0%, $color-primary 75%, $color-secondary 100%);
 }
 
+.titulo-carrossel {
+  margin: 0 0 40px;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  letter-spacing: 1px;
+  color: #0b2545;
+}
+
 .carrossel-wrapper {
   position: relative;
   width: 100%;
@@ -143,7 +151,7 @@ $recuo-texto: 125px;
 }
 
 .foto-card {
-  flex: 0 0 min(680px, 85vw);
+  flex: 0 0 min(760px, 85vw);
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
@@ -151,7 +159,7 @@ $recuo-texto: 125px;
 
   img {
     width: 100%;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 5 / 4;
     height: auto;
     object-fit: cover;
     border: 2.5px solid #000000;
@@ -202,31 +210,32 @@ $recuo-texto: 125px;
   font-weight: bold;
   color: #ffffff;
   cursor: pointer;
-  transition: all 0.5s ease;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 
   &:hover {
-    transform: translateY(-5%) scale(1.05);
+    background-color: #123a6b;
+    transform: scale(1.05);
     box-shadow: 3px 3px 0px #000000;
   }
 
   &:active {
-    transform: translateY(-5%) scale(0.95);
+    transform: scale(0.95);
     box-shadow: 1px 1px 0px #000000;
   }
 }
 
 .prev-btn {
   position: absolute;
-  left: -8px;
+  left: 0;
   top: 50%;
-  transform: translateY(-50%);
+  margin-top: -22px;
 }
 
 .next-btn {
   position: absolute;
-  right: -8px;
+  right: 0;
   top: 50%;
-  transform: translateY(-50%);
+  margin-top: -22px;
 }
 
 @media (max-width: $bp-carrossel) {
@@ -260,8 +269,20 @@ $recuo-texto: 125px;
     padding: 0 16px;
   }
 
-  .carrossel-wrapper .carrossel-btn {
-    display: none;
+  .carrossel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  .prev-btn {
+    left: 4px;
+    margin-top: -18px;
+  }
+
+  .next-btn {
+    right: 4px;
+    margin-top: -18px;
   }
 
   .foto-card {

@@ -10,13 +10,9 @@ export class ServicesComponent implements AfterViewInit, OnDestroy {
   @ViewChild('carousel') carousel!: ElementRef;
 
   eventPhotos = [
-    { url: 'assets/events/foto2.jpg', title: 'Encontro do time Hï Tech' },
-    { url: 'assets/events/foto5.jpg', title: 'Hï Tech no palco — Paraná Júnior 2025' },
-    { url: 'assets/events/foto6.jpg', title: 'Reconhecimento Palco Ouro — PRJR 2025' },
-    { url: 'assets/events/foto7.jpg', title: 'EJ União e Conexão — PRJR 2025' },
-    { url: 'assets/events/foto1.jpg', title: 'Paraná Júnior 2026' },
-    { url: 'assets/events/foto4.jpg', title: 'Hï Tech no ECOAR — Curitiba Júnior' },
-    { url: 'assets/events/foto3.jpg', title: 'Think high, think tech' }
+    { url: 'assets/acampas2025-1.jpeg', title: 'Atividade de monitoria 2025/1' },
+    { url: 'assets/acampas2025-2.jpeg', title: 'Atividade de monitoria 2025/2' },
+    { url: 'assets/acampas2026-1.jpeg', title: 'Atividade de monitoria 2026/1' },
   ];
 
   private autoplayTimer?: ReturnType<typeof setInterval>;
