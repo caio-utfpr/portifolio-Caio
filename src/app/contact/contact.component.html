@@ -34,7 +34,7 @@
     <input id="email" type="email" placeholder="E-mail*" formControlName="email" />
     <textarea id="mensagem" placeholder="Mensagem" formControlName="description"></textarea>
 
-    <button type="submit" class="enviar" [disabled]="form.invalid || isLoading">
+    <button type="submit" class="enviar" [disabled]="isLoading">
       {{ isLoading ? 'Enviando...' : 'Enviar mensagem' }}
     </button>
   </form>

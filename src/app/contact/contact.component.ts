@@ -15,9 +15,10 @@ export class ContactComponent {
   isLoading = false;
   dados$: Observable<any>;
 
-  /*COLOCAR MEU LINK AINDA TODO==========================================================================================*/
-  private apiUrl = "https://script.google.com/macros/s/AKfycbwSrUCO9dx6bTOBEjaUHYMgQ0i6nblIku5bquQoOYDmioYzmjCd1PNG_Io__eYXsn-i7Q/exec";
-
+  /*TODO: colocar a url do site que eu levantar no web3forms*/
+  private apiUrl = 'https://api.web3forms.com/submit';
+  private accessKey = 'b929f64a-1d0c-48ea-815f-9abc255a875c';
+  
   constructor(
     private formBuilder: FormBuilder,
     private toastr: ToastrService,
@@ -28,11 +29,15 @@ export class ContactComponent {
     this.form = this.formBuilder.group({
       name: [null, [Validators.required, Validators.minLength(3)]],
       email: [null, [Validators.required, Validators.email]],
-      description: [null, [Validators.required, Validators.minLength(10)]]
+      description: [null]
     });
   }
 
   async publishTask() {
+    if (this.form.get('email')?.invalid) {
+      this.toastr.error('E-mail inválido');
+      return;
+    }
 
     if (this.form.invalid) {
       this.form.markAllAsTouched();
@@ -42,24 +47,33 @@ export class ContactComponent {
     this.isLoading = true;
 
     const dados = {
+      access_key: this.accessKey,
+      subject: 'Nova mensagem do site',
       name: this.form.value.name,
       email: this.form.value.email,
-      description: this.form.value.description,
+      message: this.form.value.description ?? '',
       date: new Date().toISOString()
     };
 
     try {
-      await fetch(this.apiUrl, {
+      const res = await fetch(this.apiUrl, {
         method: 'POST',
-        mode: 'no-cors',
         headers: {
-          'Content-Type': 'text/plain;charset=utf-8'
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify(dados)
       });
 
-      this.toastr.success('Mensagem enviada com sucesso!');
-      this.form.reset();
+      const json = await res.json();
+
+      if (json.success) {
+        this.toastr.success('Mensagem enviada com sucesso!');
+        this.form.reset();
+      } else {
+        console.error(json);
+        this.toastr.error('Não foi possível enviar a mensagem.');
+      }
 
     } catch (error) {
       console.error(error);
