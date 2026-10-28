@@ -15,7 +15,7 @@ export class ContactComponent {
   isLoading = false;
   dados$: Observable<any>;
 
-  /*COLOCAR MEU LINK AINDA ==========================================================================================*/
+  /*COLOCAR MEU LINK AINDA TODO==========================================================================================*/
   private apiUrl = "https://script.google.com/macros/s/AKfycbwSrUCO9dx6bTOBEjaUHYMgQ0i6nblIku5bquQoOYDmioYzmjCd1PNG_Io__eYXsn-i7Q/exec";
 
   constructor(

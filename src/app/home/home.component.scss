@@ -357,8 +357,14 @@ section {
       flex-direction: column;
       gap: 24px;
       padding: 24px;
+
+      .pattern-overlay {
+        &.img1 { top: -20px;  left: 10px; }
+        &.img2 { top: 95px;  left: 200px; }
+        &.img3 { top: 240px;  left: 10px; }
+      }
     }
-    
+
     .hero-top h1::after {
       display: none;
     }
