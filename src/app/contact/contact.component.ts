@@ -15,7 +15,6 @@ export class ContactComponent {
   isLoading = false;
   dados$: Observable<any>;
 
-  /*TODO: colocar a url do site que eu levantar no web3forms*/
   private apiUrl = 'https://api.web3forms.com/submit';
   private accessKey = 'b929f64a-1d0c-48ea-815f-9abc255a875c';
   

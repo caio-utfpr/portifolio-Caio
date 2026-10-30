@@ -11,8 +11,8 @@ export interface SeoData {
 @Injectable({ providedIn: 'root' })
 export class SeoService {
   private readonly siteName = 'Caio Siqueira';
-  /*TODO*/
-  private readonly baseUrl = 'https://hitech.org.br';
+
+  private readonly baseUrl = 'https://portifolio-caio-gamma.vercel.app';
 
   constructor(
     private titleService: Title,
